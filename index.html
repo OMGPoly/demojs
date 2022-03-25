@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        document.write("Do cao window: " + window.innerHeight);
+        document.write("<br>Do rong window: " + window.innerWidth);
+
+        document.write("<br><br>Tong so chieu cao screen la: " + screen.height);
+        document.write("<br>Chieu cao con lai screen la: " + screen.availHeight);
+        document.write("<br><br>Tong so chieu rong screen la: " + screen.width);
+        document.write("<br>Chieu rong con lai screen la: " + screen.availWidth);
+
+        document.write("<br><br>appCodeName: " + navigator.appCodeName + "<br>");
+        document.write("appName: " + navigator.appName + "<br>");
+        document.write("version: " + navigator.version + "<br>");
+        document.write("cookieEnabled: " + navigator.cookieEnabled);
+        document.write("<br>Bang mau la: " + screen.colorDepth);
+
+        document.write("<br><br>host: " + location.host + "<br>");
+        document.write("hostname: " + location.hostname + "<br>");
+        document.write("href: " + location.href + "<br>");
+        document.write("pathname: " + location.pathname + "<br>");
+        document.write("port: " + location.port + "<br>");
+        document.write("protocol: " + location.protocol + "<br>");
+        var trangweb;
+        function op() {
+            trangweb = window.open("https://vnexpress.net/", "Báo Việt Nam", " width: 900px, height: 100px")
+            trangweb.moveTo(0, 0);
+            trangweb.resizeTo(600, 800);
+        }
+
+        function pr() {
+            Window.print("https://vnexpress.net/");
+        }
+
+        function cl() {
+            trangweb.close();
+        }
+    </script>
+</head>
+
+<body>
+    <br>
+    <button onclick="op();">Mở</button>
+    <button onclick="pr();">Print</button>
+    <button onclick="cl();">Đóng</button>
+</body>
+
+</html>
